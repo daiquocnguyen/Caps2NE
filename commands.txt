@@ -1,0 +1,77 @@
+CUDA_VISIBLE_DEVICES=0 nohup python train_capsG.py --embedding_dim 128 --name PPI.pickle --batch_size 128 --learning_rate 0.0005 --model_name ppi_128d256sbs128_1 &
+
+CUDA_VISIBLE_DEVICES=0 nohup python train_capsG.py --embedding_dim 128 --name POS.pickle --batch_size 128 --learning_rate 0.0005 --model_name pos_128d256sbs128_1 &
+
+CUDA_VISIBLE_DEVICES=0 nohup python train_capsG.py --embedding_dim 128 --name blogcatalog.pickle --batch_size 128 --learning_rate 0.0005 --model_name blog_128d256sbs128_1 &
+
+
+nohup python sampleRWdatasets.py --input graph/cora.Full.edgelist --output graph/cora.128.10.trans.pickle &
+nohup python sampleRWdatasets.py --input graph/citeseer.Full.edgelist --output graph/citeseer.128.10.trans.pickle &
+nohup python sampleRWdatasets.py --input graph/pubmed.Full.edgelist --output graph/pubmed.128.10.trans.pickle &
+
+nohup python sampleRWdatasets.py --input data/citeseer.ind.edgelist1 --output graph/citeseer.128.10.ind1.pickle &
+nohup python sampleRWdatasets.py --input data/citeseer.ind.edgelist2 --output graph/citeseer.128.10.ind2.pickle &
+nohup python sampleRWdatasets.py --input data/citeseer.ind.edgelist3 --output graph/citeseer.128.10.ind3.pickle &
+nohup python sampleRWdatasets.py --input data/citeseer.ind.edgelist4 --output graph/citeseer.128.10.ind4.pickle &
+nohup python sampleRWdatasets.py --input data/citeseer.ind.edgelist5 --output graph/citeseer.128.10.ind5.pickle &
+nohup python sampleRWdatasets.py --input data/citeseer.ind.edgelist6 --output graph/citeseer.128.10.ind6.pickle &
+nohup python sampleRWdatasets.py --input data/citeseer.ind.edgelist7 --output graph/citeseer.128.10.ind7.pickle &
+nohup python sampleRWdatasets.py --input data/citeseer.ind.edgelist8 --output graph/citeseer.128.10.ind8.pickle &
+nohup python sampleRWdatasets.py --input data/citeseer.ind.edgelist9 --output graph/citeseer.128.10.ind9.pickle &
+nohup python sampleRWdatasets.py --input data/citeseer.ind.edgelist10 --output graph/citeseer.128.10.ind10.pickle &
+
+nohup python sampleRWdatasets.py --input data/cora.ind.edgelist1 --output graph/cora.128.10.ind1.pickle &
+nohup python sampleRWdatasets.py --input data/cora.ind.edgelist2 --output graph/cora.128.10.ind2.pickle &
+nohup python sampleRWdatasets.py --input data/cora.ind.edgelist3 --output graph/cora.128.10.ind3.pickle &
+nohup python sampleRWdatasets.py --input data/cora.ind.edgelist4 --output graph/cora.128.10.ind4.pickle &
+nohup python sampleRWdatasets.py --input data/cora.ind.edgelist5 --output graph/cora.128.10.ind5.pickle &
+nohup python sampleRWdatasets.py --input data/cora.ind.edgelist6 --output graph/cora.128.10.ind6.pickle &
+nohup python sampleRWdatasets.py --input data/cora.ind.edgelist7 --output graph/cora.128.10.ind7.pickle &
+nohup python sampleRWdatasets.py --input data/cora.ind.edgelist8 --output graph/cora.128.10.ind8.pickle &
+nohup python sampleRWdatasets.py --input data/cora.ind.edgelist9 --output graph/cora.128.10.ind9.pickle &
+nohup python sampleRWdatasets.py --input data/cora.ind.edgelist10 --output graph/cora.128.10.ind10.pickle &
+
+nohup python sampleRWdatasets.py --input data/pubmed.ind.edgelist1 --output graph/pubmed.128.10.ind1.pickle &
+nohup python sampleRWdatasets.py --input data/pubmed.ind.edgelist2 --output graph/pubmed.128.10.ind2.pickle &
+nohup python sampleRWdatasets.py --input data/pubmed.ind.edgelist3 --output graph/pubmed.128.10.ind3.pickle &
+nohup python sampleRWdatasets.py --input data/pubmed.ind.edgelist4 --output graph/pubmed.128.10.ind4.pickle &
+nohup python sampleRWdatasets.py --input data/pubmed.ind.edgelist5 --output graph/pubmed.128.10.ind5.pickle &
+nohup python sampleRWdatasets.py --input data/pubmed.ind.edgelist6 --output graph/pubmed.128.10.ind6.pickle &
+nohup python sampleRWdatasets.py --input data/pubmed.ind.edgelist7 --output graph/pubmed.128.10.ind7.pickle &
+nohup python sampleRWdatasets.py --input data/pubmed.ind.edgelist8 --output graph/pubmed.128.10.ind8.pickle &
+nohup python sampleRWdatasets.py --input data/pubmed.ind.edgelist9 --output graph/pubmed.128.10.ind9.pickle &
+nohup python sampleRWdatasets.py --input data/pubmed.ind.edgelist10 --output graph/pubmed.128.10.ind10.pickle &
+
+
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind1_ --output cora --idx_time 1 --tmpString _ind1_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind2_ --output cora --idx_time 2 --tmpString _ind2_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind3_ --output cora --idx_time 3 --tmpString _ind3_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind4_ --output cora --idx_time 4 --tmpString _ind4_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind5_ --output cora --idx_time 5 --tmpString _ind5_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind6_ --output cora --idx_time 6 --tmpString _ind6_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind7_ --output cora --idx_time 7 --tmpString _ind7_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind8_ --output cora --idx_time 8 --tmpString _ind8_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind9_ --output cora --idx_time 9 --tmpString _ind9_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind10_ --output cora --idx_time 10 --tmpString _ind10_ &
+
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind1_ --output cora --idx_time 1 --tmpString _iter1_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind2_ --output cora --idx_time 2 --tmpString _iter1_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind3_ --output cora --idx_time 3 --tmpString _iter1_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind4_ --output cora --idx_time 4 --tmpString _iter1_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind5_ --output cora --idx_time 5 --tmpString _iter1_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind6_ --output cora --idx_time 6 --tmpString _iter1_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind7_ --output cora --idx_time 7 --tmpString _iter1_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind8_ --output cora --idx_time 8 --tmpString _iter1_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind9_ --output cora --idx_time 9 --tmpString _iter1_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind10_ --output cora --idx_time 10 --tmpString _iter1_ &
+
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind1_ --output cora --idx_time 1 --tmpString _168_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind2_ --output cora --idx_time 2 --tmpString _168_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind3_ --output cora --idx_time 3 --tmpString _168_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind4_ --output cora --idx_time 4 --tmpString _168_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind5_ --output cora --idx_time 5 --tmpString _168_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind6_ --output cora --idx_time 6 --tmpString _168_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind7_ --output cora --idx_time 7 --tmpString _168_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind8_ --output cora --idx_time 8 --tmpString _168_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind9_ --output cora --idx_time 9 --tmpString _168_ &
+nohup python scoring_inductive.py --run_folder /scratch/pb90/dai/runs_CapsG_ind/ --input _ind10_ --output cora --idx_time 10 --tmpString _168_ &
