@@ -40,25 +40,9 @@ Regarding the inductive setting:
 
 	$ python train_Caps2NE_ind.py --embedding_dim 128 --nameTrans citeseer.128.10.trans.pickle --nameInd citeseer.128.10.ind1.pickle --idx_time 1 --batch_size 64 --iter_routing 1 --num_sampled 256 --learning_rate 0.00005 --model_name citeseer_ind1_3
 
-### Evaluation
-
-You can modify `scoring.py` at https://github.com/phanein/deepwalk/tree/master/example_graphs to evaluate the learned node embeddings for the node classification task on POS/PPI/BlogCatalog, with using a 10-folds-cross-validation on the training set for each fraction value to find optimal hyper-parameters for each setup.
-
-**Command examples:**
-
-	$ python scoring_transductive.py --input cora --output cora --tmpString cora
-
-	$ python scoring_inductive.py --input _ind1_ --output cora --idx_time 1 --tmpString cora
-
 ### Notes
 
-File `utils.py` has a function `sampleUniformRand` to randomly sample 10 different data splits of training/validation/test sets. I also include my 10 different data splits in `dataset_name.10sampledtimes`.
-
-File `sampleRWdatasets.py` is used to generate random walks. See command examples in `commands.txt`:
-		
-	$ python sampleRWdatasets.py --input graph/cora.Full.edgelist --output graph/cora.128.10.trans.pickle
-		
-	$ python sampleRWdatasets.py --input data/pubmed.ind.edgelist1 --output graph/pubmed.128.10.ind1.pickle
+File `utils.py` has a function `sampleUniformRand` to randomly sample 10 different data splits of training/validation/test sets. I also include my 10 different data splits in `dataset_name.10sampledtimes`. You can see command examples in `commands.txt`.
 
 ## License
 
