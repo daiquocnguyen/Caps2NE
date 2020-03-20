@@ -32,43 +32,13 @@ This program provides the implementation of our unsupervised node embedding mode
 - scikit-learn
 
 ### Training
-To run the program in the transductive setting:
+Regarding the transductive setting:
 
-	$ python train_Caps2NE.py --embedding_dim <int> --name <dataset_name> --run_folder <name_of_running_folder> --num_epochs <int> --batch_size <int> --num_sampled <int> --learning_rate <float> --iter_routing <int> --model_name <name_of_saved_model>
-
-To run the program in the inductive setting for Cora/Citeseer/Pubmed:
-
-	$ python train_Caps2NE_ind.py --embedding_dim <int> --nameTrans <data_name_trans> --nameInd <dat_name_ind> --idx_time <int> --run_folder <name_of_running_folder> --num_epochs <int> --batch_size <int> --iter_routing <int> --num_sampled <int> --learning_rate <float> --model_name <name_of_saved_model>
-
-	
-**Parameters:** 
-
-`--embedding_dim`: The embedding size (and used as the dimension size of feature vectors for a random initialization in case of POS/PPI/BlogCatalog).
-
-`--learning_rate`: The initial learning rate for the Adam optimizer.
-
-`--model_name`: Name of saved model.
-
-`--run_folder`: Specify directory path to save trained models.
-
-`--batch_size`: The batch size.
-
-`--num_sampled`: The number of samples for the sampled softmax loss function.
-
-`--iter_routing`: The number of dynamic routing iterations. 
-
-`--num_epochs`: The number of training epochs.
-
-`--idx_time`: The index time of sampling training/validation/test sets (in {1, 2, ..., 10}).
-
-**Command examples:**
-		
 	$ python train_Caps2NE.py --embedding_dim 128 --name cora.128.10.trans.pickle --batch_size 64 --num_sampled 256 --iter_routing 1 --learning_rate 0.00005 --model_name cora_trans_iter1_3
 
-	$ python train_Caps2NE_ind.py --embedding_dim 128 --nameTrans citeseer.128.10.trans.pickle --nameInd citeseer.128.10.ind1.pickle --idx_time 1 --batch_size 64 --iter_routing 1 --num_sampled 256 --learning_rate 0.00005 --model_name citeseer_ind1_3
+Regarding the inductive setting:
 
-	
-In case the OS system installed `sbatch`, you can run a command: `sbatch file_name.script`, see script examples in the folder `scripts`. 
+	$ python train_Caps2NE_ind.py --embedding_dim 128 --nameTrans citeseer.128.10.trans.pickle --nameInd citeseer.128.10.ind1.pickle --idx_time 1 --batch_size 64 --iter_routing 1 --num_sampled 256 --learning_rate 0.00005 --model_name citeseer_ind1_3
 
 ### Evaluation
 
@@ -82,19 +52,13 @@ You can modify `scoring.py` at https://github.com/phanein/deepwalk/tree/master/e
 
 ### Notes
 
-It is important to note on Cora/Citeseer/Pubmed that you should report the mean and standard deviation of accuracies over 10 different times of sampling training/validation/test sets when comparing models.
-
 File `utils.py` has a function `sampleUniformRand` to randomly sample 10 different data splits of training/validation/test sets. I also include my 10 different data splits in `dataset_name.10sampledtimes`.
-
-In some preliminary experiments, you can use the process of sampling 32 random walks (instead of 128) for each node which gets similar performances, for a faster training on Cora/Citeseer/Pubmed.
 
 File `sampleRWdatasets.py` is used to generate random walks. See command examples in `commands.txt`:
 		
 	$ python sampleRWdatasets.py --input graph/cora.Full.edgelist --output graph/cora.128.10.trans.pickle
 		
 	$ python sampleRWdatasets.py --input data/pubmed.ind.edgelist1 --output graph/pubmed.128.10.ind1.pickle
-
-Unzip the zipped files in the folder `graph`.
 
 ## License
 
