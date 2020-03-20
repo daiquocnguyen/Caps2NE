@@ -11,14 +11,7 @@
 <a href="https://github.com/daiquocnguyen/Caps2NE/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/daiquocnguyen/Caps2NE"></a>
 <img alt="GitHub" src="https://img.shields.io/github/license/daiquocnguyen/Caps2NE">
 
-This program provides the implementation of our unsupervised node embedding model Caps2NE as described in [the paper](https://arxiv.org/pdf/1911.04822.pdf):
-
-        @InProceedings{Nguyen2019Caps2NE,
-          author={Dai Quoc Nguyen and Tu Dinh Nguyen and Dat Quoc Nguyen and Dinh Phung},
-          title={{A Capsule Network-based Model for Learning Node Embeddings}},
-          booktitle={arXiv:1911.04822v1},
-          year={2019}
-          }
+This program provides the implementation of our unsupervised node embedding model Caps2NE as described in [our paper](https://arxiv.org/pdf/1911.04822.pdf) where we use a capsule network to unsupervisedly learn node embeddings.
   
 <p align="center">
 	<img src="https://github.com/daiquocnguyen/Caps2NE/blob/master/Caps2NE.png">
@@ -44,9 +37,20 @@ Regarding the inductive setting:
 
 File `utils.py` has a function `sampleUniformRand` to randomly sample 10 different data splits of training/validation/test sets. I also include my 10 different data splits in `dataset_name.10sampledtimes`. You can see command examples in `commands.txt`.
 
+## Cite
+
+Please cite the paper whenever Caps2NE is used to produce published results or incorporated into other software:
+	
+	@InProceedings{Nguyen2019Caps2NE,
+          author={Dai Quoc Nguyen and Tu Dinh Nguyen and Dat Quoc Nguyen and Dinh Phung},
+          title={{A Capsule Network-based Model for Learning Node Embeddings}},
+          booktitle={arXiv:1911.04822v1},
+          year={2019}
+          }
+
 ## License
 
-Please cite the paper whenever Caps2NE is used to produce published results or incorporated into other software. As a free open-source implementation, Caps2NE is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. All other warranties including, but not limited to, merchantability and fitness for purpose, whether express, implied, or arising by operation of law, course of dealing, or trade usage are hereby disclaimed. I believe that the programs compute what I claim they compute, but I do not guarantee this. The programs may be poorly and inconsistently documented and may contain undocumented components, features or modifications. I make no guarantee that these programs will be suitable for any application.
+As a free open-source implementation, Caps2NE is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. All other warranties including, but not limited to, merchantability and fitness for purpose, whether express, implied, or arising by operation of law, course of dealing, or trade usage are hereby disclaimed. I believe that the programs compute what I claim they compute, but I do not guarantee this. The programs may be poorly and inconsistently documented and may contain undocumented components, features or modifications. I make no guarantee that these programs will be suitable for any application.
 
 Caps2NE is  is licensed under the Apache License 2.0.
 
