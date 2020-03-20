@@ -11,7 +11,7 @@
 <a href="https://github.com/daiquocnguyen/Caps2NE/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/daiquocnguyen/Caps2NE"></a>
 <img alt="GitHub" src="https://img.shields.io/github/license/daiquocnguyen/Caps2NE">
 
-This program provides the implementation of our unsupervised node embedding model Caps2NE as described in [our paper](https://arxiv.org/pdf/1911.04822.pdf) where we use a capsule network to unsupervisedly learn embeddings of nodes on random walks.
+This program provides the implementation of our unsupervised node embedding model Caps2NE as described in [our paper](https://arxiv.org/pdf/1911.04822.pdf) where we use a capsule network to unsupervisedly learn embeddings of nodes in genereated random walks.
   
 <p align="center">
 	<img src="https://github.com/daiquocnguyen/Caps2NE/blob/master/Caps2NE.png">
