@@ -2,7 +2,7 @@
 	<img src="https://github.com/daiquocnguyen/Caps2NE/blob/master/caps2ne_logo.png">
 </p>
 
-## A Capsule Network-based Model for Learning Node Embeddings<a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fdaiquocnguyen%2FCaps2NE%2Fblob%2Fmaster%2FREADME.md"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fdaiquocng"></a>
+# A Capsule Network-based Model for Learning Node Embeddings<a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fdaiquocnguyen%2FCaps2NE%2Fblob%2Fmaster%2FREADME.md"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fdaiquocng"></a>
 
 <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/daiquocnguyen/Caps2NE"><a href="https://github.com/daiquocnguyen/Caps2NE/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/daiquocnguyen/Caps2NE"></a>
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/daiquocnguyen/Caps2NE">
