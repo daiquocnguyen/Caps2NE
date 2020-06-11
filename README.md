@@ -14,7 +14,7 @@
 This program provides the implementation of our unsupervised node embedding model Caps2NE as described in [our paper](https://arxiv.org/pdf/1911.04822.pdf) where we use a capsule network to unsupervisedly learn embeddings of nodes in genereated random walks.
   
 <p align="center">
-	<img src="https://github.com/daiquocnguyen/Caps2NE/blob/master/Caps2NE.png">
+	<img src="https://github.com/daiquocnguyen/Caps2NE/blob/master/Caps2NE.png" width="550">
 </p>
 
 ## Usage
