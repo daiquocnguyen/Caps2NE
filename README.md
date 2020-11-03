@@ -44,7 +44,7 @@ Please cite the paper whenever Caps2NE is used to produce published results or i
 	@inproceedings{Nguyen2020Caps2NE,
 		author={Dai Quoc Nguyen and Tu Dinh Nguyen and Dat Quoc Nguyen and Dinh Phung},
 		title = {A Capsule Network-Based Model for Learning Node Embeddings},
-		booktitle = {Proceedings of the 29th ACM International Conference on Information & Knowledge Management},
+		booktitle = {Proceedings of the 29th ACM International Conference on Information and Knowledge Management},
 		pages = {3313–3316},
 		year={2020}
 	}
