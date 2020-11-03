@@ -41,12 +41,13 @@ File `utils.py` has a function `sampleUniformRand` to randomly sample 10 differe
 
 Please cite the paper whenever Caps2NE is used to produce published results or incorporated into other software:
 	
-	@InProceedings{Nguyen2020Caps2NE,
-          author={Dai Quoc Nguyen and Tu Dinh Nguyen and Dat Quoc Nguyen and Dinh Phung},
-          title={{A Capsule Network-based Model for Learning Node Embeddings}},
-          booktitle={Proceedings of the 29th ACM International Conference on Information and Knowledge Management (CIKM2020)},
-          year={2020}
-          }
+	@inproceedings{Nguyen2020Caps2NE,
+		author={Dai Quoc Nguyen and Tu Dinh Nguyen and Dat Quoc Nguyen and Dinh Phung},
+		title = {A Capsule Network-Based Model for Learning Node Embeddings},
+		booktitle = {Proceedings of the 29th ACM International Conference on Information & Knowledge Management},
+		pages = {3313–3316},
+		year={2020}
+	}
 
 ## License
 
